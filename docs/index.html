@@ -1,0 +1,37 @@
+<html amp lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>login</title>
+    <link rel="canonical" href="http://example.ampproject.org/article-metadata.html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+        *{padding:0;margin:0;box-sizing:border-box}main{padding:16px}fieldset{padding:0;border:0;margin:0 0 16px}.btn-submit,.input-text>input{display:block;border:1px solid #999}.input-text{margin:0 0 8px;display:block}.input-text>span{display:block;margin:0 0 4px}.input-text>input{width:100%;height:32px;padding:4px}.btn-submit{width:120px;background:#fff;font-size:16px;min-height:32px;margin:24px 0 18px}.result{color:green}
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="./js/a.js"></script>
+    <script src="./js/sha256.js"></script>
+    <script src="./js/val.js"></script>
+  </head>
+  <body>
+    <main>
+        <form method="post" name="form1" id="form1">
+            <fieldset>
+            <label class="input-text">
+            <span>ユーザーID</span>
+            <input type="text" name="user_id" id="user_id">
+            </label>
+
+            <label class="input-text">
+            <span>パスワード</span>
+            <input type="password" name="passwd" id="passwd">
+            </label>
+
+            <button type="submit" name="btn" id="btn" class="btn-submit">確認</button>
+            </fieldset>
+        </form>
+    </main>
+  </body>
+</html>

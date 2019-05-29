@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <link rel="stylesheet" type="text/css" href="./slide.css">
+        <title>工程説明画面イメージ</title>
+        <style>
+            .practice-float{
+                font-size: 18px;
+            }
+            .practice-float p{
+                background-color: white;
+                overflow:hidden;
+                margin:10px 0;
+                padding:5px
+            }
+            .practice-float .floated{
+                float:left;
+                margin-right:10px;
+                margin-bottom:10px;
+                width:60px;
+                height:60px;
+            }
+            .practice-float .floated.right{
+                float:right;
+            }
+            .tab_wrap{width:100%; margin:10px auto;}
+            input[type="radio"]{display:none;}
+            .tab_area{font-size:0; margin:0 10px;}
+            .tab_area label{width:440px; margin:0 5px; display:inline-block; padding:12px 0; color:#999; background:#ddd; text-align:center; font-size:13px; cursor:pointer; transition:ease 0.2s opacity;}
+            .tab_area label:hover{opacity:0.5;}
+            .panel_area{background:#fff;}
+            .tab_panel{width:100%; padding:10px 0; display:none;}
+            .tab_panel p{font-size:14px; letter-spacing:1px;}
+
+            #tab1:checked ~ .tab_area .tab1_label{background:#fff; color:#000;}
+            #tab1:checked ~ .panel_area #panel1{display:block;}
+            #tab2:checked ~ .tab_area .tab2_label{background:#fff; color:#000;}
+            #tab2:checked ~ .panel_area #panel2{display:block;}
+        　　.sample {width: 100%;}
+        　　.sample td {width: 100%;border: 1px solid #c7c7bc;color: #404040;}
+        　　.sample td a{display:block;width:100%;height:100%;}
+        　　.sample td a:hover{background-color: #f49d9d;}
+        </style>
+        <script src="./js/val.js"></script>
+        <script>
+            window.onload = function(){
+                compare(document.cookie);
+            };
+        </script>
+    </head>
+    <body>
+    <div class="body">
+        <div class="header">
+            <img src="./image/rogo.png" class="rogo">
+            <div class="header-btn">
+                <div class="search-set">
+                    <img src="./image/search.png" class="search">
+                    <p>検索</p>
+                </div>
+                <div class="sns-set">
+                    <img src="./image/sns.png" class="sns">
+                    <p>SNS</p>
+                </div>
+                <select name="language" class="language">
+                    <option value="japanese" selected>日本語</option>
+                    <option value="english">英語</option>
+                    <option value="chinese">中国語</option>
+                </select>
+            </div>
+        </div>
+        <p class="page-path">工程MAP>ユニット-鋳造（鋳鉄）>遠心鋳造>塗型>塗型装置</p>
+        <div class="menu">
+                <h2></h2>
+                <div class="menu-btn">
+                <a href="./process_map.html"><img src="./image/home.png" class="home"></a>
+                <a href="./process_detail3.html"><img src="./image/back.png" class="back"></a>
+            </div>
+        </div>
+
+        <div class="tab_wrap">
+            <input id="tab1" type="radio" name="tab_btn" checked>
+            <input id="tab2" type="radio" name="tab_btn">
+
+            <div class="tab_area">
+                <label class="tab1_label" for="tab1">設備・機器</label>
+                <label class="tab2_label" for="tab2">商材</label>
+            </div>
+            <div class="panel_area">
+                <div id="panel1" class="tab_panel">
+                        <div class="menu">
+                            <h2>【塗型装置とは】</h2>
+                        </div>
+
+                        <div class="practice-float">
+                            <p>
+                                <img class="floated" src="./image/souti.PNG" style="width: 60%; height: 50%;">
+                                塗型剤を鋳型に対し1mm以上の厚さで浸透させ且つ滑らかな表面にして塗布できると共に、工数及び
+                                コストを確実に低減できる塗型方法を提供する。
+                            </p>
+                        </div>
+                    </div>
+                <div id="panel2" class="tab_panel">
+                    <table class="sample">
+                        <thead>
+                            <tr>
+                                <th>一般名称</th>
+                                <th>商品名</th>
+                                <th>メーカー名</th>
+                                <th>シリーズ名</th>
+                                <th>特徴</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>塗料剤</td>
+                                <td>ヌレール</td>
+                                <td>TM塗料</td>
+                                <td>PPMシリーズ</td>
+                                <td>テストテキスト</td>
+                            </tr>
+                            <tr>
+                                <td><a href="./commodity_detail.html">補修ホース</a></td>
+                                <td><a href="./commodity_detail.html">UX-0012</a></td>
+                                <td><a href="./commodity_detail.html">三河ホース</a></td>
+                                <td><a href="./commodity_detail.html">UXシリーズ</a></td>
+                                <td><a href="./commodity_detail.html">テストテキスト</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

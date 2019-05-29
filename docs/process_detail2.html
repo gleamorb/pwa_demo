@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <link rel="stylesheet" type="text/css" href="./slide.css">
+        <title>工程説明画面イメージ</title>
+        <style>
+            .practice-float{
+                font-size: 18px;
+            }
+            .practice-float p{
+                background-color: white;
+                overflow:hidden;
+                margin:10px 0;
+                padding:5px
+            }
+            .practice-float .floated{
+                float:left;
+                margin-right:10px;
+                margin-bottom:10px;
+                width:60px;
+                height:60px;
+            }
+            .practice-float .floated.right{
+                float:right;
+            }
+        </style>
+        <script src="./js/val.js"></script>
+        <script>
+            window.onload = function(){
+                compare(document.cookie);
+            };
+        </script>
+    </head>
+    <body>
+    <div class="body">
+        <div class="header">
+            <img src="./image/rogo.png" class="rogo">
+            <div class="header-btn">
+                <div class="search-set">
+                    <img src="./image/search.png" class="search">
+                    <p>検索</p>
+                </div>
+                <div class="sns-set">
+                    <img src="./image/sns.png" class="sns">
+                    <p>SNS</p>
+                </div>
+                <select name="language" class="language">
+                    <option value="japanese" selected>日本語</option>
+                    <option value="english">英語</option>
+                    <option value="chinese">中国語</option>
+                </select>
+            </div>
+        </div>
+        <p class="page-path">工程MAP>ユニット-鋳造（鋳鉄）>遠心鋳造</p>
+        <div class="menu">
+            <h2>【遠心鋳造工程とは】</h2>
+            <div class="menu-btn">
+                <a href="./process_map.html"><img src="./image/home.png" class="home"></a>
+                <a href="./process_detail.html"><img src="./image/back.png" class="back"></a>
+            </div>
+        </div>
+
+        <div class="practice-float">
+            <p>
+                <img class="floated" src="./image/koutei2.PNG" style="width: 60%; height: 50%;">
+                遠心鋳造もしくは遠心鋳造法とは、鋳造手法の一つ。重力鋳造が重力を利用するのに対し、遠心鋳造では
+                型を鉛直の軸周りに回転させることで発生する遠心力を利用して、緻密な鋳物作成に用いられる。
+                工業、芸術等幅広い分野で応用されている。
+                形状が複雑な小さい部品を鋳造する場合、静止した型に溶解金属を流し込んでも、その表面張力高さの為に
+                隅々まで金属が行き渡らないことがある。型を回転させながら溶解金属を流し込むことで、遠心力によって
+                行き渡らせることができる。同様の問題は吸引鋳造でも解決可能である。
+            </p>
+        </div>
+
+        <h2>【遠心鋳造工程に含まれる工程】</h2>
+        <div class="footer-btn">
+            <a href="#">溶解</a>
+            <a href="./process_detail3.html">塗型</a>
+            <a href="#">鋳造</a>
+            <a href="#">後処理</a>
+            <a href="#">検査</a>
+        </div>
+
+    </div>
+    </body>
+</html>

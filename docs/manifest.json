@@ -1,0 +1,14 @@
+{
+    "name": "demo",
+    "short_name": "demo",
+    "icons": [
+        {
+            "src": "/image/rogo.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#e91e63"
+}

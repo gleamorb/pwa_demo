@@ -1,0 +1,239 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(12px + 0.15vw);
+}
+
+.body {
+    max-width: 1000px;
+    width: 100%;
+    align-self: flex-start;
+}
+
+.rogo {
+    width: 80px;
+    height: 80px;
+}
+
+.search, .sns{
+    width: 50px;
+    height: 50px;
+}
+
+.home, .back{
+    width: 40px;
+    height: 40px;
+}
+
+.down {
+    width: 20px;
+    height: 20px;
+    padding-right: 15px;
+}
+
+table {
+    width: 100%;
+    margin: 5px auto;
+}
+
+th{
+    background-color: #E5E5FF;
+    border-left: solid 10px #7F7FFF;
+    padding: 2px 5px 2px 5px;
+    text-align: left;
+    font-size: calc(14px + 0.15vw);
+}
+
+td{
+    padding: 2px 30px 2px 5px;
+    background-color: #F9F9F9;
+    font-size: calc(14px + 0.10vw);
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px #808080;
+    box-shadow: 0px 12px 20px -20px rgba(0, 0, 0, 0.8);
+}
+
+.header-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-path {
+    padding-left: 5px;
+}
+
+.menu, .content, .fastView, .footer-info {
+    width: 100%;
+    padding: 10px 5px 10px 5px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.fastView {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-set, .sns-set {
+    text-align: center;
+    font-size: calc(13px + 0.15vw);
+}
+
+.language {
+    border: 0px;
+    font-size: calc(14px + 0.15vw);
+}
+
+.rogo, .search-set, .sns-set, .language {
+    padding: 0 5px 0 5px;
+}
+
+.rogo, .search-set, .sns-set, .language {
+    align-self: center;
+}
+
+.main-info-table {
+    align-self: flex-start;
+    max-width: 500px;
+}
+
+.main-info-table th {
+    width: 25%;
+}
+
+.image {
+    max-width: 500px;
+    width: 100%;
+    padding: 10px 0 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-list {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-right: 30px;
+}
+
+.image-sub-1, .image-sub-2 {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.image-main-info {
+    width: 100%;
+}
+
+.image-main {
+    cursor: pointer;
+    width: 90%;
+    padding-bottom: 90%;
+}
+
+.zoom-message {
+    text-align: center;
+    font-size: calc(12px + 0.15vw);
+    color: #404040;
+}
+
+.image-main-zoom {
+    background-color: #efefef;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 90vmin;
+    height: 90vmin;
+}
+
+.image-main:active ~ .image-main-zoom {
+    display: block;
+}
+
+.image-list label{
+    cursor: pointer;
+}
+
+input{
+    display: none;
+}
+
+#select-1:checked ~ .image-main-info .image-main, #select-1:checked ~ .image-main-info .image-main-zoom {
+    background: url(./image/hose_01.jpg);
+    background-size: 100% 100%;
+}
+
+#select-1:checked ~ .image-list .image-sub-1 {
+    box-shadow: 0px 0px 40px -5px rgba(255, 136, 0, 1);
+}
+
+#select-2:checked ~ .image-main-info .image-main, #select-2:checked ~ .image-main-info .image-main-zoom {
+    background: url(./image/hose_02.jpg);
+    background-size: 100% 100%;
+}
+
+#select-2:checked ~ .image-list .image-sub-2 {
+    box-shadow: 0px 0px 40px -5px rgba(255, 136, 0, 1);
+}
+
+.footer-btn {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-btn a {
+    margin: 10px;
+    padding: 10px;
+    background: rgb(74, 74, 248);
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: calc(13px + 0.15vw);
+    color: #FFFFFF;
+    width: 200px;
+    text-align: center;
+}
+
+.footer-btn a:hover {
+    background: rgb(22, 22, 248);
+}
+
+.footer-info {
+
+}
+
+.footer-info-message {
+    font-size: calc(15px + 0.15vw);
+    font-weight: bold;
+    color: rgb(95, 95, 252);
+}

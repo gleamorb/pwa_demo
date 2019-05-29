@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <link rel="stylesheet" type="text/css" href="./slide.css">
+        <title>工程説明画面イメージ</title>
+        <style>
+            .practice-float{
+                font-size: 18px;
+            }
+            .practice-float p{
+                background-color: white;
+                overflow:hidden;
+                margin:10px 0;
+                padding:5px
+            }
+            .practice-float .floated{
+                float:left;
+                margin-right:10px;
+                margin-bottom:10px;
+                width:60px;
+                height:60px;
+            }
+            .practice-float .floated.right{
+                float:right;
+            }
+        </style>
+        <script src="./js/val.js"></script>
+        <script>
+            window.onload = function(){
+                compare(document.cookie);
+            };
+        </script>
+    </head>
+    <body>
+    <div class="body">
+        <div class="header">
+            <img src="./image/rogo.png" class="rogo">
+            <div class="header-btn">
+                <div class="search-set">
+                    <img src="./image/search.png" class="search">
+                    <p>検索</p>
+                </div>
+                <div class="sns-set">
+                    <img src="./image/sns.png" class="sns">
+                    <p>SNS</p>
+                </div>
+                <select name="language" class="language">
+                    <option value="japanese" selected>日本語</option>
+                    <option value="english">英語</option>
+                    <option value="chinese">中国語</option>
+                </select>
+            </div>
+        </div>
+        <p class="page-path">工程MAP>ユニット-鋳造（鋳鉄）</p>
+        <div class="menu">
+            <h2>【鋳造（鋳鉄）工程とは】</h2>
+            <div class="menu-btn">
+                <a href="./process_map.html"><img src="./image/home.png" class="home"></a>
+                <a href="./process_map.html"><img src="./image/back.png" class="back"></a>
+            </div>
+        </div>
+
+        <div class="practice-float">
+            <p>
+                <img class="floated" src="./image/koutei.PNG" style="width: 60%; height: 50%;">
+                【鋳造（鋳鉄）】工程は古代からある加工方法で、砂を型に利用した砂型鋳造は寺の梵鐘製造等で用いられていた。
+                現在でも、大量生産品の鋳造に幅広く用いられている。砂型で製造したものは表面のざらつきが大きく、そのまま
+                機械部品として使えないため、仕上げ加工を行うことが一般的である。一方、工芸品等の制作では、石膏型を使う
+                ことが多い。石膏型では原型を蜜蝋等の高温で溶ける材料で制作し、原形を石膏で塗り固めた後、原形を除去して
+                材料を流し込む。この方法では、砂型に比べて表面のざらつきが小さく、型の合わせ目がないため、後処理が容易になる。
+            </p>
+        </div>
+
+        <h2>【鋳造（鋳鉄）に含まれる工程】</h2>
+        <div class="footer-btn">
+            <a href="#">重力鋳造</a>
+            <a href="./process_detail2.html">遠心鋳造</a>
+        </div>
+
+    </div>
+    </body>
+</html>

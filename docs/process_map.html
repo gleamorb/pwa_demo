@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <link rel="stylesheet" type="text/css" href="./slide.css">
+        <title>工程MAPイメージ</title>
+        <style>
+                .details-1-label, .details-2-label, .details-3-label {
+                    width: 100%;
+                }
+
+                .details-1-message, .details-2-message, .details-3-message {
+                    display: block;
+                    margin: 5px auto;
+                    width: 100%;
+                    font-size: calc(15px + 0.15vw);
+                    font-weight: bold;
+                    color: #FFFFFF;
+                    background: #7F7FFF;
+                    cursor: pointer;
+                    padding: 10px 0 10px 15px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                .details-1-message:hover, .details-2-message:hover, .details-3-message:hover {
+                    background: rgb(74, 74, 248);
+                }
+
+                .details-1-table, .details-2-table, .details-3-table {
+                    display: none;
+                }
+
+                #details-1:checked ~ .details-1-table {
+                    display: block;
+                }
+
+                #details-2:checked ~ .details-2-table {
+                    display: block;
+                }
+
+                #details-3:checked ~ .details-3-table {
+                    display: block;
+                }
+            </style>
+            <link rel="manifest" href="./manifest.json">
+            <script src="./main.js"></script>
+            <script src="./js/val.js"></script>
+            <script>
+                window.onload = function(){
+                    compare(document.cookie);
+                };
+            </script>
+        </head>
+    <body>
+    <div class="body">
+        <div class="header">
+            <img src="./image/rogo.png" class="rogo">
+            <div class="header-btn">
+                <div class="search-set">
+                    <img src="./image/search.png" class="search">
+                    <p>検索</p>
+                </div>
+                <div class="sns-set">
+                    <img src="./image/sns.png" class="sns">
+                    <p>SNS</p>
+                </div>
+                <select name="language" class="language">
+                    <option value="japanese" selected>日本語</option>
+                    <option value="english">英語</option>
+                    <option value="chinese">中国語</option>
+                </select>
+            </div>
+        </div>
+        <p class="page-path">工程MAP</p>
+
+        <input type="checkbox" name="details" id="details-1">
+        <label for="details-1" class="details-1-label">
+            <p class="details-1-message">ボデー<img src="./image/down.png" class="down"></p>
+        </label>
+        <table class="details-1-table">
+            <tr>
+                <td>プレス</td>
+            </tr>
+            <tr>
+                <td>ボデー組付</td>
+            </tr>
+            <tr>
+                <td>塗装</td>
+            </tr>
+            <tr>
+                <td>表面処理</td>
+            </tr>
+            <tr>
+                <td>車両組立</td>
+            </tr>
+            <tr>
+                <td>樹脂成形</td>
+            </tr>
+        </table>
+
+        <input type="checkbox" name="details" id="details-2">
+        <label for="details-2" class="details-2-label">
+            <p class="details-2-message">ユニット<img src="./image/down.png" class="down"></p>
+        </label>
+        <table class="details-2-table">
+            <tr>
+                <td><a href="./process_detail.html">鋳造（鋳鉄）</a></td>
+            </tr>
+            <tr>
+                <td>鋳造（アルミ）</td>
+            </tr>
+            <tr>
+                <td>鍛造</td>
+            </tr>
+            <tr>
+                <td>焼結</td>
+            </tr>
+            <tr>
+                <td>熱処理</td>
+            </tr>
+            <tr>
+                <td>機械加工</td>
+            </tr>
+            <tr>
+                <td>機械組付</td>
+            </tr>
+        </table>
+
+        <input type="checkbox" name="details" id="details-3">
+        <label for="details-3" class="details-3-label">
+            <p class="details-3-message">電子部品<img src="./image/down.png" class="down"></p>
+        </label>
+        <table class="details-3-table">
+            <tr>
+                <td>ECU</td>
+            </tr>
+            <tr>
+                <td>センサー</td>
+            </tr>
+            <tr>
+                <td>アクチュエータ</td>
+            </tr>
+            <tr>
+                <td>パワーエレクトロニクス</td>
+            </tr>
+            <tr>
+                <td>表示デバイス</td>
+            </tr>
+        </table>
+    </div>
+    </body>
+</html>

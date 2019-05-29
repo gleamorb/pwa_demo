@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <link rel="stylesheet" type="text/css" href="./slide.css">
+        <title>商品詳細画面イメージ</title>
+        <style>
+            .details-1-label, .details-2-label {
+                width: 100%;
+            }
+
+            .details-1-message, .details-2-message {
+                display: block;
+                margin: 5px auto;
+                width: 100%;
+                font-size: calc(15px + 0.15vw);
+                font-weight: bold;
+                color: #FFFFFF;
+                background: #7F7FFF;
+                cursor: pointer;
+                padding: 10px 0 10px 15px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .details-1-message:hover, .details-2-message:hover {
+                background: rgb(74, 74, 248);
+            }
+
+            .details-1-table, .details-2-info {
+                display: none;
+            }
+
+            #details-1:checked ~ .details-1-table {
+                display: block;
+            }
+
+            #details-2:checked ~ .details-2-info {
+                display: block;
+            }
+        </style>
+        <script src="./js/val.js"></script>
+        <script>
+            window.onload = function(){
+                compare(document.cookie);
+            };
+        </script>
+    </head>
+    <body>
+        <div class="body">
+            <div class="header">
+                <img src="./image/rogo.png" class="rogo">
+                <div class="header-btn">
+                    <div class="search-set">
+                        <img src="./image/search.png" class="search">
+                        <p>検索</p>
+                    </div>
+                    <div class="sns-set">
+                        <img src="./image/sns.png" class="sns">
+                        <p>SNS</p>
+                    </div>
+                    <select name="language" class="language">
+                        <option value="japanese" selected>日本語</option>
+                        <option value="english">英語</option>
+                        <option value="chinese">中国語</option>
+                    </select>
+                </div>
+            </div>
+            <p class="page-path">工程MAP＞ユニット-鋳造(鋳鉄)＞遠心鋳造＞塗型＞塗型装置＞商材</p>
+            <div class="menu">
+                <p>カテゴリ：商材名称</p>
+                <div class="menu-btn">
+                    <a href="./process_map.html"><img src="./image/home.png" class="home"></a>
+                    <a href="./device.html"><img src="./image/back.png" class="back"></a>
+                </div>
+            </div>
+            <div class="content">
+                <div class="fastView">
+                    <div class="image">
+                        <input type="radio" name="select" id="select-1" checked="checked">
+                        <input type="radio" name="select" id="select-2">
+                        <div class="image-list">
+                            <label for="select-1">
+                                <img src="./image/hose_01.jpg" class="image-sub-1">
+                            </label>
+                            <label for="select-2">
+                                <img src="./image/hose_02.jpg" class="image-sub-2">
+                            </label>
+                        </div>
+                        <div class="image-main-info">
+                            <div class="image-main"></div>
+                            <p class="zoom-message">画像をクリックして拡大イメージを表示</p>
+                            <div class="image-main-zoom"></div>
+                        </div>
+                    </div>
+                    <table class="main-info-table">
+                        <tr>
+                            <th>商品名</th>
+                            <td>UX-0012</td>
+                        </tr>
+                        <tr>
+                            <th>一般名称</th>
+                            <td>補修用ホース</td>
+                        </tr>
+                        <tr>
+                            <th>目的・用途</th>
+                            <td>塗装装置に塗料を送るためのホース</td>
+                        </tr>
+                        <tr>
+                            <th>特徴</th>
+                            <td>接続部が丈夫で長持ちするが価格はやや高め</td>
+                        </tr>
+                        <tr>
+                            <th>注意点</th>
+                            <td>ホースが長いと詰まりやすいため、適切な長さで設置すること</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <input type="checkbox" name="details" id="details-1">
+                <label for="details-1" class="details-1-label">
+                    <p class="details-1-message">詳細情報を表示<img src="./image/down.png" class="down"></p>
+                </label>
+                <table class="details-1-table">
+                    <tr>
+                        <th>カテゴリー</th>
+                        <td>モノ</td>
+                    </tr>
+                    <tr>
+                        <th>メーカー名</th>
+                        <td>三河ホース</td>
+                    </tr>
+                    <tr>
+                        <th>シリーズ名</th>
+                        <td>UXシリーズ</td>
+                    </tr>
+                    <tr>
+                        <th>型式</th>
+                        <td>UX-0012</td>
+                    </tr>
+                    <tr>
+                        <th>頻度</th>
+                        <td>毎年</td>
+                    </tr>
+                    <tr>
+                        <th>備考</th>
+                        <td>特になし</td>
+                    </tr>
+                    <tr>
+                        <th>客先への提案資料</th>
+                        <td><a href="#">ダウンロード</a></td>
+                    </tr>
+                    <tr>
+                        <th>メーカーHP</th>
+                        <td><a href="#">http://abcd.efg.jp</a></td>
+                    </tr>
+                    <tr>
+                        <th>カタログダウンロード</th>
+                        <td><a href="#">http://abcd.efg.jp/catalog/ux-series</a></td>
+                    </tr>
+                    <tr>
+                        <th>動画</th>
+                        <td><a href="#">http://youtube.com/abcdef/aaaa</a></td>
+                    </tr>
+                    <tr>
+                        <th>検索キーワード</th>
+                        <td>TMC推奨品</td>
+                    </tr>
+                </table>
+                <input type="checkbox" name="details" id="details-2">
+                <label for="details-2" class="details-2-label">
+                    <p class="details-2-message">参考情報を表示<img src="./image/down.png" class="down"></p>
+                </label>
+                <p class="details-2-info">
+                    材料を注入するホースは、○○○○○○○○○をすることで組み付け可能になるが、組み付け後にかならず ○○○○○○○○○の確認を実施する必要がある。保守点検のサービス時に２年経過していた場合には 交換をした方が良い。
+                </p>
+                <div class="footer-btn">
+                    <a href="#">商流を確認する</a>
+                    <a href="#">SNSの話題へ</a>
+                    <a href="#">最新価格表を見る</a>
+                    <a href="#">見積りを作る</a>
+                </div>
+            </div>
+            <div class="footer-info">
+                <p class="footer-info-message">最近閲覧した商材</p>
+                <div class="footer-info-list">
+                    <div class="slideshow">
+                        <input type="radio" name="slideshow" id="switch1" checked>
+                        <input type="radio" name="slideshow" id="switch2">
+                        <input type="radio" name="slideshow" id="switch3">
+                        <input type="radio" name="slideshow" id="switch4">
+                        <input type="radio" name="slideshow" id="switch5">
+
+                        <div class="slideContents">
+                            <section id="slide1">
+                                <div>
+                                    <img src="./image/item1.png">
+                                    <p>商材１</p>
+                                </div>
+                                <div>
+                                    <img src="./image/item03.jpg">
+                                    <p>商材２</p>
+                                </div>
+                                <div>
+                                    <img src="./image/3.jpg">
+                                    <p>商材３</p>
+                                </div>
+                            </section>
+                            <section id="slide2">
+                                <div>
+                                    <img src="./image/4.jpg">
+                                    <p>商材４</p>
+                                </div>
+                                <div>
+                                    <img src="./image/5.jpg">
+                                    <p>商材５</p>
+                                </div>
+                                <div>
+                                    <img src="./image/6.jpg">
+                                    <p>商材６</p>
+                                </div>
+                            </section>
+                            <section id="slide3">
+                                <div>
+                                    <img src="./image/7.jpg">
+                                    <p>商材７</p>
+                                </div>
+                                <div>
+                                    <img src="./image/8.jpg">
+                                    <p>商材８</p>
+                                </div>
+                                <div>
+                                    <img src="./image/9.jpg">
+                                    <p>商材９</p>
+                                </div>
+                            </section>
+                            <section id="slide4">
+                                <div>
+                                    <img src="./image/10.jpg">
+                                    <p>商材１０</p>
+                                </div>
+                                <div>
+                                    <img src="./image/11.jpg">
+                                    <p>商材１１</p>
+                                </div>
+                                <div>
+                                    <img src="./image/12.jpg">
+                                    <p>商材１２</p>
+                                </div>
+                            </section>
+                            <section id="slide5">
+                                <div>
+                                    <img src="./image/13.jpg">
+                                    <p>商材１３</p>
+                                </div>
+                                <div>
+                                    <img src="./image/14.jpg">
+                                    <p>商材１４</p>
+                                </div>
+                                <div>
+                                    <img src="./image/15.png">
+                                    <p>商材１５</p>
+                                </div>
+                            </section>
+                        </div>
+
+                        <p class="arrow prev">
+                            <i class="ico"></i>
+                            <label for="switch1"></label>
+                            <label for="switch2"></label>
+                            <label for="switch3"></label>
+                            <label for="switch4"></label>
+                            <label for="switch5"></label>
+                        </p>
+                        <p class="arrow next">
+                            <i class="ico"></i>
+                            <label for="switch1"></label>
+                            <label for="switch2"></label>
+                            <label for="switch3"></label>
+                            <label for="switch4"></label>
+                            <label for="switch5"></label>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

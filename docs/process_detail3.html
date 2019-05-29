@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <link rel="stylesheet" type="text/css" href="./slide.css">
+        <title>工程説明画面イメージ</title>
+        <style>
+            .practice-float{
+                font-size: 18px;
+            }
+            .practice-float p{
+                background-color: white;
+                overflow:hidden;
+                margin:10px 0;
+                padding:5px
+            }
+            .practice-float .floated{
+                float:left;
+                margin-right:10px;
+                margin-bottom:10px;
+                width:60px;
+                height:60px;
+            }
+            .practice-float .floated.right{
+                float:right;
+            }
+        </style>
+        <script src="./js/val.js"></script>
+        <script>
+            window.onload = function(){
+                compare(document.cookie);
+            };
+        </script>
+    </head>
+    <body>
+    <div class="body">
+        <div class="header">
+            <img src="./image/rogo.png" class="rogo">
+            <div class="header-btn">
+                <div class="search-set">
+                    <img src="./image/search.png" class="search">
+                    <p>検索</p>
+                </div>
+                <div class="sns-set">
+                    <img src="./image/sns.png" class="sns">
+                    <p>SNS</p>
+                </div>
+                <select name="language" class="language">
+                    <option value="japanese" selected>日本語</option>
+                    <option value="english">英語</option>
+                    <option value="chinese">中国語</option>
+                </select>
+            </div>
+        </div>
+        <p class="page-path">工程MAP>ユニット-鋳造（鋳鉄）>遠心鋳造>塗型</p>
+        <div class="menu">
+            <h2>【塗型工程とは】</h2>
+            <div class="menu-btn">
+                <a href="./process_map.html"><img src="./image/home.png" class="home"></a>
+                <a href="./process_detail2.html"><img src="./image/back.png" class="back"></a>
+            </div>
+        </div>
+
+        <div class="practice-float">
+            <p>
+                <img class="floated" src="./image/koutei3.PNG" style="width: 60%; height: 50%;">
+                塗型や中子の砂の表面を溶湯の熱から保護し、鋳肌を改善したり、焼付を防止する目的で鋳型表面に材料を塗るための工程
+            </p>
+        </div>
+
+        <h2>【塗型工程に含まれる設備】</h2>
+        <div class="footer-btn">
+            <a href="./device.html">塗型装置</a>
+            <a href="#">熱風乾燥機</a>
+        </div>
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,153 @@
+.slideshow {
+    max-width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+input[name="slideshow"] {
+	display: none;
+}
+
+/* :::::: slideContents :::::: */
+.slideContents {
+	position: relative;
+	background: #ffffff;
+	text-align: center;
+	-webkit-user-select: none;
+	user-select: none;
+	transition: transform .6s;
+}
+.slideContents section {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transform: translateX(100%);
+	transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.slideContents section div {
+	max-width: 25%;
+}
+.slideContents section img {
+	max-width: 100%;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	vertical-align: middle;
+	height: 200px;
+}
+.slideContents section p {
+	text-align: center;
+}
+
+/* :::::: arrows :::::: */
+.arrow,
+.arrow label,
+.arrow .ico {
+	position: absolute;
+}
+.arrow {
+	top: 0;
+	margin: 0;
+	transition: background .3s;
+}
+.prev {
+	left: 0;
+}
+.next {
+	right: 0;
+}
+.arrow:hover {
+	background: rgba(255,255,255,.2);
+}
+.arrow,
+.arrow label {
+	cursor: pointer;
+	width: 50px;
+	height: 100%;
+}
+.arrow label {
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+.arrow .ico {
+	top: calc(50% - 6px);
+	width: 12px;
+	height: 12px;
+	border-top: 3px solid black;
+	opacity: .5;
+}
+.prev .ico {
+	left: 50%;
+	border-left: 3px solid black;
+	transform: rotate(-45deg);
+	transition: left .3s cubic-bezier(0.215, 0.61, 0.355, 1), opacity .3s;
+}
+.next .ico {
+	right: 50%;
+	border-right: 3px solid black;
+	transform: rotate(45deg);
+	transition: right .3s cubic-bezier(0.215, 0.61, 0.355, 1), opacity .3s;
+}
+.arrow:hover .ico {
+	opacity: .6;
+}
+.prev:hover .ico {
+	left: calc(50% - 6px);
+}
+.next:hover .ico {
+	right: calc(50% - 6px);
+}
+
+/* :::::: mechanism :::::: */
+#switch1:checked ~ .slideContents #slide1,
+#switch2:checked ~ .slideContents #slide2,
+#switch3:checked ~ .slideContents #slide3,
+#switch4:checked ~ .slideContents #slide4,
+#switch5:checked ~ .slideContents #slide5 {
+	position: relative;
+	transform: none;
+}
+#switch1:checked ~ .slideContents #slide5,
+#switch1:checked ~ .slideContents #slide4,
+#switch2:checked ~ .slideContents #slide1,
+#switch2:checked ~ .slideContents #slide5,
+#switch3:checked ~ .slideContents #slide2,
+#switch3:checked ~ .slideContents #slide1,
+#switch4:checked ~ .slideContents #slide3,
+#switch4:checked ~ .slideContents #slide2,
+#switch5:checked ~ .slideContents #slide4,
+#switch5:checked ~ .slideContents #slide3 {
+	transform: translateX(-100%);
+}
+#switch1:checked ~ .slideContents #slide3,
+#switch1:checked ~ .slideContents #slide4,
+#switch2:checked ~ .slideContents #slide4,
+#switch2:checked ~ .slideContents #slide5,
+#switch3:checked ~ .slideContents #slide5,
+#switch3:checked ~ .slideContents #slide1,
+#switch4:checked ~ .slideContents #slide1,
+#switch4:checked ~ .slideContents #slide2,
+#switch5:checked ~ .slideContents #slide2,
+#switch5:checked ~ .slideContents #slide3 {
+	transition-duration: 0s;
+}
+
+/* :::::: arrow mechanism :::::: */
+.arrow label {
+	pointer-events: none;
+}
+#switch1:checked ~ .prev label[for="switch5"],
+#switch2:checked ~ .prev label[for="switch1"],
+#switch3:checked ~ .prev label[for="switch2"],
+#switch4:checked ~ .prev label[for="switch3"],
+#switch5:checked ~ .prev label[for="switch4"],
+#switch1:checked ~ .next label[for="switch2"],
+#switch2:checked ~ .next label[for="switch3"],
+#switch3:checked ~ .next label[for="switch4"],
+#switch4:checked ~ .next label[for="switch5"],
+#switch5:checked ~ .next label[for="switch1"] {
+	pointer-events: auto;
+}
