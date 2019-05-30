@@ -52,6 +52,27 @@
                     integrity="sha384-VcI6S+HIsE80FVM1jgbd6WDFhzKYA0PecD/LcIyMQpT4fMJdijBh0I7Iblaacawc"
                     crossorigin="anonymous">
             </script>
+            <script>
+                window.addEventListener('load', function() {
+                  if ('serviceWorker' in navigator) {
+                    navigator.serviceWorker.register("/sw.js")
+                      .then(function(registration) {
+                        return registration.pushManager.getSubscription().then(function(subscription) {
+                          if (subscription) {
+                            return subscription
+                          }
+                          return registration.pushManager.subscribe({
+                            userVisibleOnly: true
+                          })
+                        })
+                      }).then(function(subscription) {
+                        console.log("pushManager endpoint:", subscription.endpoint)
+                      }).catch(function(error) {
+                        console.warn("serviceWorker error:", error)
+                      })
+                  }
+                });
+            </script>
             <script src="./main.js"></script>
             <script src="./js/val.js"></script>
             <script>
