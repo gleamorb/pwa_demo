@@ -20,7 +20,7 @@ self.addEventListener('install', (event) => {
 });
 
 /** プッシュ通知イベント */
-self.addEventListener("push", function(event) {
+self.addEventListener('push', function(event) {
     event.waitUntil(
         self.registration.pushManager.getSubscription()
             .then(function(subscription) {
