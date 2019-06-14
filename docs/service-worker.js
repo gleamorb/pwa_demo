@@ -21,30 +21,32 @@ self.addEventListener('install', (event) => {
 
 /** プッシュ通知イベント */
 self.addEventListener('push', function(event) {
-    event.waitUntil(
-        self.registration.pushManager.getSubscription()
-            .then(function(subscription) {
-            if (subscription) {
-                return subscription.endpoint
-            }
-            throw new Error('User not subscribed')
-            })
-            .then(function(res) {
-                return fetch('/notifications.json')
-            })
-            .then(function(res) {
-                if (res.status === 200) {
-                return res.json()
-                }
-                throw new Error('notification api response error')
-            })
-            .then(function(res) {
-                return self.registration.showNotification(res.title, {
-                icon: '/pwa_demo/image/rogo.png',
-                body: res.body
-            })
-        })
-    )
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyAM_YeeyCq0iPtUDXJv7rv9Ek5mrwMp1LQ",
+        authDomain: "pwa-pushdemo-94bb7.firebaseapp.com",
+        databaseURL: "https://pwa-pushdemo-94bb7.firebaseio.com",
+        projectId: "pwa-pushdemo-94bb7",
+        storageBucket: "pwa-pushdemo-94bb7.appspot.com",
+        messagingSenderId: "10453373238",
+        appId: "1:10453373238:web:68d979d2e6d990f8"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    const messaging = firebase.messaging();
+    messaging.requestPermission()
+    .then(() => {
+        console.log('Have permission')
+        return messaging.getToken() //ユーザにプッシュ通知を表示する権限の許可を表示
+    }).then((currentToken) => {
+        if (currentToken) {
+            // プッシュ通知を受信し，表示できる状態
+            console.log(currentToken);
+        }
+    }).catch((err) => {
+        console.log('Error Occurred.');
+    })
 })
 
 /** アクティベートイベント */
