@@ -22,9 +22,6 @@ self.addEventListener('install', (event) => {
 /** プッシュ通知イベント */
 self.addEventListener('push', function(event) {
 
-    importScripts('https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js');
-    importScripts('https://www.gstatic.com/firebasejs/6.1.0/firebase-messaging.js');
-
     // Your web app's Firebase configuration
     var firebaseConfig = {
         apiKey: "AIzaSyAM_YeeyCq0iPtUDXJv7rv9Ek5mrwMp1LQ",
