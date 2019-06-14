@@ -52,6 +52,19 @@
                     integrity="sha384-VcI6S+HIsE80FVM1jgbd6WDFhzKYA0PecD/LcIyMQpT4fMJdijBh0I7Iblaacawc"
                     crossorigin="anonymous">
             </script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/0.0.11/push.min.js"></script>
+            <script>
+                Push.create('ようこそ', {
+                　　body: 'PWAデモページです！',
+                　　icon: './image/rogo.png',
+                　　timeout: 8000, // 通知が消えるタイミング
+                　　vibrate: [100, 100, 100], // モバイル端末でのバイブレーション秒数
+                　　onClick: function() {
+                　　　　// 通知がクリックされた場合の設定
+                　　　　console.log(this);
+                　　}
+                });
+            </script>
             <script src="./main.js"></script>
             <script src="./js/val.js"></script>
             <script>
