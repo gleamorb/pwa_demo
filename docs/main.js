@@ -28,7 +28,6 @@ if ('serviceWorker' in navigator) {
                         if (currentToken) {
                             // プッシュ通知を受信し，表示できる状態
                             console.log(currentToken);
-                            document.write(currentToken);
                         } else {
                             console.log('permission NG');
                         }
